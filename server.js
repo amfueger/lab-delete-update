@@ -14,7 +14,7 @@ app.get('/humans', (req, res) => {
 
 
 //Listener
-app.get(3000, () => {
+app.listen(3000, () => {
 	console.log('listener working');
 })
 
