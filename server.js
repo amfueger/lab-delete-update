@@ -1,12 +1,18 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-
 const methodOverride = require('method-override');
 
+
+//model
 const Humans = require('./models/humans');
 
 
+//middelware
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(methodOverride('_method'));
+
+//stuff
 app.get('/humans', (req, res) => {
 	res.render('index.ejs', {Humans});
 });
