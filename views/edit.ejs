@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Edit People</h1>
+	<form method="POST" accept="/humans/<%=id%>?_method=PUT">
+		Name: <input type="text" name="name" value="<%=humans.name%>"/>
+		<br>
+		Eye-Color: <input type="text" name="Eye-Color" value="<%=humans.eyecolor%>"/>
+		<br>
+		Hair-Color: <input type="text" name="Hair-Color" value="<%=humans.haircolor%>"/>
+		<br>
+		Hat: <input type="checkbox" name="Hat" 
+			<%= if(humans.hat === true){%>
+			checked
+			<%}%>
+		/>
+		Shirt-Pattern: <input type="text" name="Shirt-Pattern" value="<%=humans.shirtpattern%>">
+		<br>
+		<input type="submit" name="" value="Submit Changes"/>
+	</form>
+
+</body>
+</html>
